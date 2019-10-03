@@ -1,0 +1,121 @@
+<div class="container">
+  <div class="row">
+  <div class="col-3" *ngIf="animationStep <= 3"></div>
+    <div @pageAnimations class="col-9" *ngIf="animationStep <= 2">
+      <div class="row align-items-center h-100">
+        <div class="left-panel">
+          <div [@fadeInOut]="animationStep" *ngIf="animationStep <= 2" class="just-go-away">
+            the
+            <br>
+          </div>
+          <div [@fadeInStay]="animationStep" *ngIf="animationStep <= 2">
+            data
+            <br>
+          </div>
+          <div [@fadeInLate]="animationStep" *ngIf="animationStep <= 2">
+            never
+            <br>
+          </div>
+          <div [@fadeInStay]="animationStep" *ngIf="animationStep <= 2">
+            speaks
+            <br>
+            for
+            <br>
+            itself
+          </div>
+        </div>
+      </div>
+    </div>
+    <div @iconItemAnimation @contentArea class="col contentArea" *ngIf="animationStep > 3">
+      <div class="row rowAnimation icon-bar">
+        <div class="col icon-item">
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <svg-icon
+                src="../../assets/icons/data-analysis-interface-symbol-of-a-monitor-with-a-bars-graphic-with-a-magnifier.svg"
+                [applyCss]="true" [svgStyle]="{'width.vw': 5}">
+              </svg-icon>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <p class="label">Interactive Data Visualizations</p>
+            </div>
+            <div class="col-4"></div>
+          </div>
+        </div>
+        <div class="col icon-item">
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <svg-icon src="../../assets/icons/brain-computer-interface.svg" [applyCss]="true"
+                [svgStyle]="{'width.vw': 5}">
+              </svg-icon>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <p class="label">Business Intelligence Automation</p>
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="col icon-item">
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <svg-icon src="../../assets/icons/data.svg" [applyCss]="true" [svgStyle]="{'width.vw': 5}">
+              </svg-icon>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <p class="label">Database and API Design</p>
+            </div>
+            <div class="col-4"></div>
+          </div>
+        </div>
+        <div class="col icon-item">
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <svg-icon src="../../assets/icons/api.svg" [applyCss]="true" [svgStyle]="{'width.vw': 5}">
+              </svg-icon>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <p class="label">Workflow Streamlining and Automation</p>
+            </div>
+            <div class="col-4"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row h-100 align-items-center row-animation">
+        <div class="col mx-auto">
+          <h3><strong>I'm Colin, and I can help. <br>
+              <hr> I make tools for collecting, managing, analyzing, and making sense of data</strong></h3>
+        </div>
+        <div class="col mx-auto">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-1" *ngIf="animationStep > 3"></div>
+  </div>
+</div>

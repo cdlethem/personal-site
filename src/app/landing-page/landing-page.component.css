@@ -1,0 +1,79 @@
+#content {
+  text-align: center;
+  font-family: "Lato";
+  color: whitesmoke;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.6), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: -25%;
+}
+
+.frosted {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.01);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(2px);
+}
+
+.prof-img img {
+  width: 250px;
+}
+
+.prof-img {
+  position: relative;
+  top: 100px;
+  z-index: -1;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 5em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+hr {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.fa-code g g path {
+  stroke: black;
+  stroke-width: 4px;
+}
+
+#menu-inline li {
+  display: inline-block;
+  margin: 10px;
+  color: #000;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+#menu-inline li.active {
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+#menu-inline li a {
+  text-decoration: none;
+  text-shadow: none;
+  color: #000;
+}
+#menu-inline li.active a:hover {
+  color: #000;
+}
+#menu-inline li:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+#menu-inline li a,
+#menu-inline li.active a {
+  padding: 9px 18px;
+  display: block;
+}
+#menu-inline li.active a {
+  color: #fff;
+}

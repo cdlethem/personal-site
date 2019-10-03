@@ -1,0 +1,46 @@
+.left-panel {
+  font-family: "Raleway";
+  font-size: 8vw;
+  line-height: 7vw;
+  color: ivory;
+  margin-left: 20px;
+}
+
+svg-icon {
+  fill: ivory;
+}
+
+.label {
+  font-size: 1vw;
+  color: ivory;
+  font-family: "OpenSans";
+  text-align: left;
+  padding-top: 10px;
+  max-width: 5vw;
+}
+
+h3 {
+  color: ivory;
+  font-family: "OpenSans";
+  font-size: 2vw;
+  text-align: right;
+}
+
+hr {
+  width: 25%;
+  margin-right: 0px;
+}
+
+p {
+  color: ivory;
+  font-family: "OpenSans";
+  font-size: 1vw;
+  text-align: left;
+}
+
+.just-go-away {
+  opacity: 0;
+  font-size: "8vw";
+  line-height: "7vw";
+}
+
