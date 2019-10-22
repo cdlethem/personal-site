@@ -7,3 +7,9 @@ text {
   stroke: #000;
   stroke-width: 1.2px;
 }
+
+svg{
+  display: block;
+  margin-right: 0px;
+  margin-left: auto;
+}

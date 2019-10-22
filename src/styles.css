@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/fullpage.js/dist/fullpage.scss';
 
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 @font-face {
   font-family: 'Raleway';
   src: url(/assets/fonts/Raleway/Raleway-Regular.ttf) format('truetype');

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { faCode, faProjectDiagram, faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { faCode, faProjectDiagram, faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,7 +12,14 @@ export class LandingPageComponent implements OnInit {
 
   faCode = faCode;
   faProjectDiagram = faProjectDiagram;
-  faArrowAltCircleDown = faArrowAltCircleDown;
+  faChevronCircleDown = faChevronCircleDown;
+  @Output()
+  moveDown = new EventEmitter<boolean>()
+  @Input() delayOver: boolean;
+
+  onClick = () => {
+    this.moveDown.emit(true)
+  }
 
   ngOnInit() {
   }

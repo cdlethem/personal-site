@@ -1,0 +1,10 @@
+<ng-select
+    [items]="tagsArray"
+    [multiple]="true"
+    [closeOnSelect]="false"
+    [hideSelected]="true"
+    placeholder="Select some tags to view corresponding projects"
+    [(ngModel)]="selectedTags"
+    (change)="onChange()"
+    dropdownPosition="bottom">
+</ng-select>

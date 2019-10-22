@@ -1,1 +1,35 @@
-<p>projects-page works!</p>
+<div class="container body">
+  <div id="modal-container"></div>
+  <div class="col">
+    <div class="row">
+      <h4 class="heading">Projects</h4>
+    </div>
+    <div class="row d-flex">
+      <div class="alert alert-secondary" role="alert">
+        <div class="form-inline">
+          <label>Displaying&nbsp;<strong>{{ (loadedProjects | projectsFilter:selectedTags:'tags').length }}</strong>&nbsp;of&nbsp;<strong>{{ loadedProjects.length }}</strong>&nbsp;Projects</label>
+          <app-project-select (filterTags)="onTagsChange($event)"></app-project-select>
+          <button class="btn btn-sm btn-inline btn-danger" (click)="onClear()">Clear</button>
+          <button class="btn btn-sm btn-inline btn-info" (click)="onClickSeeAll()">Show All</button>
+        </div>
+      </div>
+    </div>
+    <div class="row itemsBlock d-flex">
+      <div @projectAnimation id="outputProjects" *ngFor="let project of loadedProjects | projectsFilter:selectedTags:'tags'; let index = index">
+        <div  class="item-col col-12 col-sm-6 col-md-4" style="padding:2px 2px; margin:0px 0px">
+          <app-project class="item" [projectData]="project"></app-project>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="(loadedProjects | projectsFilter:selectedTags:'tags').length === 0"
+      class="row d-flex justify-content-center">
+      <div id="not-found" class="alert alert-secondary" role="alert">
+        <h4 class="alert-heading"> No Projects to Display</h4>
+        <hr>
+        <p class="mb-0">Use the controls above to select some tags or click on a node of the graph on the <a
+            href="/#skillsPage">previous
+            page</a></p>
+      </div>
+    </div>
+  </div>
+</div>

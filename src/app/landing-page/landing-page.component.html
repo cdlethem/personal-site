@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="row">
+<div class="container-fluid d-flex flex-column" style="min-height:90vh; padding-bottom:50px;">
+  <div class="row justify-content-center">
     <div class="col">
       <div class="frosted">
         <div id="content">
@@ -13,18 +13,13 @@
             <fa-icon [icon]="faCode"></fa-icon>
             Full-Stack Developer
           </div>
-          <br>
-          <!-- <ul id="menu-inline">
-            <li data-menuanchor="home" class="active" f><a href="#home">Home</a></li>
-            <li data-menuanchor="aboutPage"><a href="#aboutPage">About Me</a></li>
-            <li data-menuanchor="skillsPage"><a href="#skillsPage">Skills</a></li>
-            <li data-menuanchor="educationPage"><a href="#educationPage">Education</a></li>
-            <li data-menuanchor="projectsPage"><a href="#projectsPage">Projects</a></li>
-            <li data-menuanchor="experiencePage"><a href="#experiencePage">Experience</a></li>
-            <li data-menuanchor="contactPage"><a href="#contactPage">Contact Me</a></li>
-          </ul> -->
         </div>
       </div>
     </div>
+  </div>
+  <div class="row justify-content-center flex-fill align-content-end">
+        <button style="display:contents" (click)="onClick()">
+          <fa-icon class="arrowDown" [ngClass]="{'bouncing': this.delayOver}" [icon]="faChevronCircleDown"></fa-icon>
+        </button>
   </div>
 </div>

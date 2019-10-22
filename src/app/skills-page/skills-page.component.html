@@ -1,1 +1,47 @@
-<app-circular-packing url = 'flare.json'></app-circular-packing>
+<div class="container body">
+  <div class="col">
+    <div [@animationTop]="this.loaded" class="row justify-content-center">
+      <h4 class="heading">SKILLS</h4>
+    </div>
+    <div [@animationTop]="this.loaded" class="row">
+      <div class="alert">
+        <div class="row">
+          <div class="col-9">
+            <p><strong>These are the languages, frameworks, and technologies I've used in my work.</strong>
+              Click on a node below to see projects showcasing that technology</p>
+          </div>
+          <div class="col-3"><a href='#'>
+              <div (click)="this.onClickSeeAll()" class="btn float-right">See All Projects &nbsp;
+                <fa-icon [icon]="faAngleDoubleRight"></fa-icon>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+      <div class="col-4">
+        <div [@animationLeft]="this.loaded" class="row sidebar align-items-center">
+          <div class="lead">
+            <h4> A jack of all trades and a master of some </h4>
+            <hr>
+            <p>I have a
+              focused expertise in designing interactive data visualizations and working experience with a breadth
+              of
+              languages and
+              frameworks necessary for modern data science and full-stack web development.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div [@animationRight]="this.loaded" class="col-8 align-items-center">
+        <div class="row">
+          <h5></h5>
+        </div>
+        <app-circle-packing-renderer class="d-flex" *ngIf="display" [root]="jsonRoot" [svgHeight]="svgHeight"
+          [svgWidth]="svgWidth">
+        </app-circle-packing-renderer>
+      </div>
+    </div>
+  </div>
+</div>

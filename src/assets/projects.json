@@ -1,0 +1,152 @@
+{
+  "app-navigator": {
+    "title": "College Application Navigator",
+    "shortDesc": "A Shiny Web App for visualizing selective college admissions results with interactive scatterplots and advanced filtering functionality",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R",
+      "Shiny",
+      "Data Visualization",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/scatterplots_snip.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "sl-explorer": {
+    "title": "School List Explorer",
+    "shortDesc": "A Shiny Web App filtering and viewing the historical college application results for past ESC students",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R",
+      "Shiny",
+      "Data Visualization",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/school_choice_tools.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "tm-application": {
+    "title": "T-Minus Application",
+    "shortDesc": "A Shiny Web App that visualizes students' standardized test score improvement using histograms and an interactive spaghetti plot",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R",
+      "Shiny",
+      "Data Visualization",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/t_minus_appcon.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "webtools": {
+    "title": "Webtools HR Management System",
+    "shortDesc": "A full-featured CMS for managing vacation requests, internal employee surveys, reimbursement and more",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "NodeJS",
+      "KeystoneJS",
+      "Full-Stack",
+      "JQuery",
+      "Bootstrap",
+      "MongoDB",
+      "REST API"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/webtools_backend.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "sa-dashboard": {
+    "title": "Sales Analytics Dashboard",
+    "shortDesc": "A Shiny Dashboard that displays interactive visualizations of a sales pipeline and metrics for the performance of sales staff",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R",
+      "Shiny",
+      "Shiny Dashboard",
+      "Data Visualization",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/srt_analytics_1.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "color-guessing": {
+    "title": "RGB Guessing Game",
+    "shortDesc": "A simple HTML/CSS/Vanilla JS guessing game for building intuition for the RGB color scale",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "CSS",
+      "JavaScript",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/color_guessing.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "dff-genetic": {
+    "title": "Daily Fantasy Football Genetic Algorithm",
+    "shortDesc": "A genetic algorithm implementation in R that generates optimal daily fantasy lineups based on custom constraints and composite projections",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/ff_genetic.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "recommender": {
+    "title": "College Recommender System",
+    "shortDesc": "A recommender system for US colleges implemented in R/Shiny that ranks colleges based on how often they appear together on past students application lists",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R",
+      "Shiny",
+      "Data Visualization",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/you_may_also_like.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "signing-tracker": {
+    "title": "Sales Tracking Dashboard",
+    "shortDesc": "A Shiny Dashboard that fetches data from a custom CRM and displays interactive visualizations of overall sales performance",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R",
+      "Shiny",
+      "Shiny Dashboard",
+      "Data Visualization",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/signing_tracker.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  },
+  "srt_dashboard": {
+    "title": "Sales Lead Management Interface",
+    "shortDesc": "A Shiny app that fetches data from a custom CRM and displays information about sales pipeline status and contact history",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+    "tags": [
+      "R",
+      "Shiny",
+      "Frontend"
+    ],
+    "demoURL": "",
+    "githubURL": "",
+    "thumbURL": "../assets/img/projects/srt_dashboard.JPG",
+    "contextURLs": ["../assets/img/projects/ff_genetic.JPG", "../assets/img/projects/signing_tracker.JPG", "../assets/img/projects/t_minus_appcon_hist.JPG" ]
+  }
+}

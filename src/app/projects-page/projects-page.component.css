@@ -1,0 +1,110 @@
+.heading {
+  display: flex;
+  color: ivory;
+  font-weight: 700;
+  font-size: 2rem;
+  flex: 1;
+  width: 100%;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.heading:before,
+.heading:after,
+.heading-ie span.after,
+.heading-ie span.before {
+  content: "";
+  flex-grow: 1;
+  margin-top: 0px;
+  background-size: 100% 6px;
+  background-position: 0% 50%;
+  background-repeat: repeat-x;
+}
+
+.heading::before {
+  margin-right: 7%;
+}
+
+.heading::after {
+  margin-left: 7%;
+}
+.heading:before,
+.heading-ie span.before {
+  background-image: linear-gradient(to left, transparent, ivory);
+}
+.heading:after,
+.heading-ie span.after {
+  background-image: linear-gradient(to right, transparent, ivory);
+}
+
+.subheading {
+  text-transform: uppercase;
+  text-align: start;
+  color: darkslategray;
+}
+
+hr {
+  margin-top: 3px;
+  padding-top: 2px;
+}
+
+.body {
+ padding-top: 50px;
+ padding-bottom: 150px;
+}
+
+.projects-output {
+  margin-right: 0px;
+}
+
+.alert {
+  margin-top: 8px;
+  flex-grow: 100;
+  display: inline-block;
+}
+
+#not-found {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 25px;
+}
+
+.form-inline{
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+app-project-select {
+  width: 50%;
+  margin: inherit;
+}
+
+.itemsBlock {
+margin: 0 auto;
+margin-right: 0px;
+width: 1000px;
+padding: 0;
+}
+
+@media screen and (max-width: 430px) {
+  .itemsBlock{
+      width:200px;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 630px) {
+  .itemsBlock{
+      width:400px;
+  }
+}
+@media screen and (min-width: 631px) and (max-width: 830px) {
+  .itemsBlock{
+      width:600px;
+  }
+}
+@media screen and (min-width: 831px) and (max-width: 1030px) {
+  .itemsBlock{
+      width:800px;
+  }
+}
+

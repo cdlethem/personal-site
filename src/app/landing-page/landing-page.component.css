@@ -5,7 +5,48 @@
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.6), 0px 8px 13px rgba(0, 0, 0, 0.1),
     0px 18px 23px rgba(0, 0, 0, 0.1);
   position: relative;
-  margin-top: -25%;
+  margin-top: 5%;
+}
+
+.flex-fill{
+  flex: 1;
+}
+
+.arrowDown {
+  height: 15vh;
+  width: 15vh;
+  max-height: 150px;
+  max-width: 150px;
+  font-size: 100px;
+  color: whitesmoke;
+}
+
+.bouncing {
+  animation: bounce 2s infinite;
+  z-index: 5;
+}
+
+.delayedShow{
+  visibility: hidden;
+  animation: 0s linear 1.7s forwards delayedShow ;
+}
+
+@keyframes delayedShow {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 .frosted {
@@ -42,38 +83,4 @@ hr {
 .fa-code g g path {
   stroke: black;
   stroke-width: 4px;
-}
-
-#menu-inline li {
-  display: inline-block;
-  margin: 10px;
-  color: #000;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
-#menu-inline li.active {
-  background: #666;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
-#menu-inline li a {
-  text-decoration: none;
-  text-shadow: none;
-  color: #000;
-}
-#menu-inline li.active a:hover {
-  color: #000;
-}
-#menu-inline li:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-#menu-inline li a,
-#menu-inline li.active a {
-  padding: 9px 18px;
-  display: block;
-}
-#menu-inline li.active a {
-  color: #fff;
 }

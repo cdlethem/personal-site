@@ -23,9 +23,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fullpage/angular-fullpage": "0.0.14",
+    "@ng-select/ng-select": "^3.0.7",
     "angular-svg-icon": "^8.0.0",
     "bootstrap": "^4.3.1",
     "d3-ng2-service": "^2.2.0",
+    "ngx-carousel-lib": "^0.1.2",
+    "ngx-simple-modal": "^1.4.4",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

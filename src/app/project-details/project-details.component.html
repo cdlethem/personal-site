@@ -1,0 +1,35 @@
+<div class="modal-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="modal-header-custom">
+                <h4>{{ project.title }}</h4>
+                <h4><span class="badge badge-secondary badge-{{index}} float-right"
+                        *ngFor="let tag of project.tags; let index = index">{{tag}}</span></h4>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row d-flex justify-content-center carousel-container">
+                <button (click)="onPrevSlide()" class="arrow-left"><fa-icon class="arrow" [icon]="faChevronCircleLeft"></fa-icon></button>
+                <carousel-component #modalCarousel [initialSlide]="1">
+                    <div *ngFor="let url of project.contextURLs; let index = index" class="item-carousel">
+                        <img class = "carousel-img img-fluid" src="{{ url }}">
+                    </div>
+                </carousel-component>
+                <button (click)="onNextSlide()" class="arrow-right"><fa-icon class="arrow" [icon]="faChevronCircleRight"></fa-icon></button>
+            </div>
+            <div class="row">
+                <span class="lead">{{ project.longDesc }}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal-footer-custom">
+                <button type="button" class="btn btn-outline-danger" (click)="close()">Close</button>
+                <a type="button" class="btn btn-outline-primary" href="{{project.githubURL}}" target="_blank">View
+                    Source
+                    Code</a>
+                <a type="button" class="btn btn-outline-primary" href="{{project.demoURL}}" target="_blank">Open
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+</div>

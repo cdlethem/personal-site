@@ -1,12 +1,13 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
+import { ProjectsService } from './projects.service';
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "personal-site";
   config: any;
   fullpage_api: any;
@@ -16,6 +17,9 @@ export class AppComponent {
   activeAnchor: string;
   faChevronCircleDown = faChevronCircleDown;
   animationStep: number;
+  animateAboutPage = true;
+  skillsPageLoaded = 0;
+  projectsPageLoaded = 0;
 
   incrementAnimationStep = (
     stepsArray: number[] = [],
@@ -50,33 +54,35 @@ export class AppComponent {
     } else {
       unevenTimeout(stepsArray);
     }
-  };
+  }
 
-  moveDown = () => {
-    this.fullpage_api.moveSectionDown();
-  };
+  handleMoveDown = (event) => {
+    if(event) {
+      this.fullpage_api.moveSectionDown();
+    }
+  }
 
-  constructor() {
+  
+
+  constructor(private projectsService: ProjectsService) {
     this.config = {
       // fullpage options
       anchors: [
         "home",
         "aboutPage",
         "skillsPage",
-        "educationPage",
-        "projectsPage",
+        // "projectsPage",
         "experiencePage",
         "contactPage"
       ],
       menu: "#menu",
-      navigation: true,
+      navigation: false,
       navigationPosition: "right",
       navigationTooltips: [
         "Home",
         "About Me",
         "Skills",
-        "Education",
-        "Projects",
+        // "Projects",
         "Experience",
         "Contact"
       ],
@@ -88,14 +94,14 @@ export class AppComponent {
       css3: true,
       scrollingSpeed: 700,
       autoScrolling: true,
-      fitToSection: false,
-      fitToSectionDelay: 1000,
+      fitToSection: true,
+      fitToSectionDelay: 200,
       scrollBar: false,
       easing: "easeInOutCubic",
       easingcss3: "ease",
       loopBottom: false,
       loopTop: false,
-      loopHorizontal: true,
+      loopHorizontal: false,
       continuousVertical: false,
       continuousHorizontal: false,
       scrollHorizontally: true,
@@ -104,8 +110,8 @@ export class AppComponent {
       offsetSections: false,
       resetSliders: false,
       fadingEffect: false,
-      // normalScrollElements: '#element1, .element2',
-      scrollOverflow: false,
+      normalScrollElements: '.itemsBlock, .ng-dropdown-panel, .ng-select, .modal, .modal-content',
+      scrollOverflow: true,
       scrollOverflowReset: false,
       scrollOverflowOptions: null,
       touchSensitivity: 15,
@@ -117,10 +123,10 @@ export class AppComponent {
       recordHistory: true,
 
       // Design
-      controlArrows: false,
-      verticalCentered: true,
+      controlArrows: true,
+      verticalCentered: false,
       // sectionsColor : ['#ccc', '#fff'],
-      paddingTop: "3em",
+      paddingTop: "2em",
       paddingBottom: "0px",
       // fixedElements: '#header, .footer',
       responsiveWidth: 0,
@@ -157,19 +163,46 @@ export class AppComponent {
           }, 1500);
         }
 
-        if (destination.anchor === "aboutPage") {
+        if (destination.anchor === "aboutPage" && this.animateAboutPage) {
           this.incrementAnimationStep([200, 1500, 1500, 500, 1000]);
+          this.animateAboutPage = false;
+        }
+
+        if (destination.anchor === "skillsPage") {
+          this.skillsPageLoaded = 1;
+        }
+      },
+      afterSlideLoad: (section, origin, destination, direction) => {
+        if (section.anchor === "skillsPage" && destination.index === 0) {
+          this.skillsPageLoaded = 1;
+        }
+
+        if(section.anchor === "skillsPage" && destination.index === 1) {
+          this.projectsPageLoaded = 1;
+        }
+      },
+      onSlideLeave: (section, origin, destination, direction) => {
+        if (section.anchor === "skillsPage" && origin.index === 0) {
+          this.skillsPageLoaded = 0;
+        }
+
+        if (section.anchor === "skillsPage" && origin.index === 1) {
+          this.projectsPageLoaded = 0;
         }
       },
       onLeave: (origin, destination, direction) => {
-        this.animationStep = 0;
-        this.delayOver = false;
+        // this.animationStep = 0;
+        // this.delayOver = false;
         this.activeAnchor = destination.anchor;
 
         if (!destination.isFirst) {
           this.showMenu = true;
         } else {
           this.showMenu = false;
+        }
+
+        if (origin.anchor === "skillsPage") {
+          this.skillsPageLoaded = 0;
         }
       }
     };
@@ -178,4 +211,24 @@ export class AppComponent {
   getRef(fullPageRef) {
     this.fullpage_api = fullPageRef;
   }
+
+  ngOnInit() {
+    this.projectsService.goToProjects.subscribe( data => {
+      if (data) {
+        this.fullpage_api.moveSlideRight();
+        this.projectsService.goToProjects.next(false);
+      }
+    });
+
+    this.projectsService.triggerRebuild.subscribe( data => {
+      setTimeout(()=>{
+        if (data) {
+          this.fullpage_api.reBuild();
+          console.log("rebuilt")
+          this.projectsService.triggerRebuild.next(false);
+        }
+      },1500)
+    })
+  }
+
 }
