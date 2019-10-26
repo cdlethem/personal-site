@@ -51,7 +51,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
     NgSelectModule,
     FormsModule,
     SimpleModalModule,
-    CarouselModule
+    CarouselModule,
   ],
   entryComponents: [
     ProjectDetailsComponent
@@ -59,7 +59,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
   providers: [D3Service, CirclePackingJsonService,
     {
       provide: DefaultSimpleModalOptionConfig,
-      useValue: {...defaultSimpleModalOptions,...{ closeOnEscape: true, closeOnClickOutside: true }}
+      useValue: { ...defaultSimpleModalOptions, ...{ closeOnEscape: true, closeOnClickOutside: true } }
     }],
   bootstrap: [AppComponent]
 })

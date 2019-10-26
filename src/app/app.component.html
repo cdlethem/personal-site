@@ -1,40 +1,40 @@
 <!-- app.component.html -->
 <ul *ngIf="showMenu" id="menu">
   <li data-menuanchor="home"><a href="#home">Home</a></li>
-  <li data-menuanchor="aboutPage" [ngClass]="{'active': activeAnchor === 'aboutPage'}"><a href="#aboutPage">About Me</a>
+  <li data-menuanchor="about" [ngClass]="{'active': activeAnchor === 'about'}"><a href="#about">About Me</a>
   </li>
-  <li data-menuanchor="skillsPage" [ngClass]="{'active': activeAnchor === 'skillsPage'}"><a
-      href="#skillsPage">Skills</a></li>
-  <li data-menuanchor="experiencePage" [ngClass]="{'active': activeAnchor === 'experiencePage'}"><a
-      href="#experiencePage">Experience</a></li>
-  <li data-menuanchor="contactPage" [ngClass]="{'active': activeAnchor === 'contactPage'}"><a
-      href="#contactPage">Contact Me</a></li>
+  <li data-menuanchor="skills" [ngClass]="{'active': activeAnchor === 'portfolio'}"><a
+      href="#portfolio">Portfolio</a></li>
+  <li data-menuanchor="education" [ngClass]="{'active': activeAnchor === 'education'}"><a
+      href="#education">Education</a></li>
+  <li data-menuanchor="contact" [ngClass]="{'active': activeAnchor === 'contact'}"><a
+      href="#contact">Contact Me</a></li>
 </ul>
 
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)" #fullpageRef>
-  <div class="section fp-noscroll" id="landing">
+  <div class="section fp-noscroll" id="homePage">
     <div class="container">
       <div class="row justify-content-center">
         <app-landing-page [delayOver]="delayOver" (moveDown)="handleMoveDown($event)"></app-landing-page>
       </div>
     </div>
   </div>
-  <div class="section fp-noscroll" id="about">
+  <div class="section fp-noscroll" id="aboutPage">
     <div class="about-bg"></div>
     <app-about-page [animationStep]="animationStep"></app-about-page>
   </div>
-  <div class="section" id="skills">
-    <div class="slide fp-noscroll">
+  <div class="section" id="portfolioPage">
+    <div class="slide fp-noscroll" id="skillsPage">
       <app-skills-page [skillsPageLoaded]="skillsPageLoaded"></app-skills-page>
     </div>
-    <div class="slide" id="projects">
+    <div class="slide" id="projectsPage">
       <app-projects-page [projectsPageLoaded]="projectsPageLoaded"></app-projects-page>
     </div>
   </div>
-  <div class="section" id="experience">
+  <div class="section fp-noscroll" id="experiencePage">
     <app-experience-page></app-experience-page>
   </div>
-  <div class="section" id="contact">
+  <div class="section" id="contactPage">
     <app-contact-page></app-contact-page>
   </div>
 </div>

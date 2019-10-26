@@ -69,11 +69,10 @@ export class AppComponent implements OnInit {
       // fullpage options
       anchors: [
         "home",
-        "aboutPage",
-        "skillsPage",
-        // "projectsPage",
-        "experiencePage",
-        "contactPage"
+        "about",
+        "portfolio",
+        "education",
+        "contact"
       ],
       menu: "#menu",
       navigation: false,
@@ -81,9 +80,9 @@ export class AppComponent implements OnInit {
       navigationTooltips: [
         "Home",
         "About Me",
-        "Skills",
+        "Portfolio",
         // "Projects",
-        "Experience",
+        "Education",
         "Contact"
       ],
       showActiveTooltip: true,
@@ -163,30 +162,30 @@ export class AppComponent implements OnInit {
           }, 1500);
         }
 
-        if (destination.anchor === "aboutPage" && this.animateAboutPage) {
+        if (destination.anchor === "about" && this.animateAboutPage) {
           this.incrementAnimationStep([200, 1500, 1500, 500, 1000]);
           this.animateAboutPage = false;
         }
 
-        if (destination.anchor === "skillsPage") {
+        if (destination.anchor === "portfolio") {
           this.skillsPageLoaded = 1;
         }
       },
       afterSlideLoad: (section, origin, destination, direction) => {
-        if (section.anchor === "skillsPage" && destination.index === 0) {
+        if (section.anchor === "portfolio" && destination.index === 0) {
           this.skillsPageLoaded = 1;
         }
 
-        if(section.anchor === "skillsPage" && destination.index === 1) {
+        if(section.anchor === "portfolio" && destination.index === 1) {
           this.projectsPageLoaded = 1;
         }
       },
       onSlideLeave: (section, origin, destination, direction) => {
-        if (section.anchor === "skillsPage" && origin.index === 0) {
+        if (section.anchor === "portfolio" && origin.index === 0) {
           this.skillsPageLoaded = 0;
         }
 
-        if (section.anchor === "skillsPage" && origin.index === 1) {
+        if (section.anchor === "portfolio" && origin.index === 1) {
           this.projectsPageLoaded = 0;
         }
       },
@@ -201,7 +200,7 @@ export class AppComponent implements OnInit {
           this.showMenu = false;
         }
 
-        if (origin.anchor === "skillsPage") {
+        if (origin.anchor === "portfolio") {
           this.skillsPageLoaded = 0;
         }
       }
@@ -227,7 +226,7 @@ export class AppComponent implements OnInit {
           console.log("rebuilt")
           this.projectsService.triggerRebuild.next(false);
         }
-      },1500)
+      },150)
     })
   }
 
