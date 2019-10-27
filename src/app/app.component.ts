@@ -16,45 +16,9 @@ export class AppComponent implements OnInit {
   delayOver = false;
   activeAnchor: string;
   faChevronCircleDown = faChevronCircleDown;
-  animationStep: number;
-  animateAboutPage = true;
+  aboutPageLoaded = 0;
   skillsPageLoaded = 0;
   projectsPageLoaded = 0;
-
-  incrementAnimationStep = (
-    stepsArray: number[] = [],
-    evenSteps: boolean = false,
-    evenStepLength: number = 1000,
-    maxSteps: number = 1
-  ) => {
-    let i = 0;
-
-    const unevenTimeout = (steps: number[]) => {
-      const doNext = () => {
-
-        if (i >= steps.length + 1) {
-          return;
-        }
-        this.animationStep = i;
-        console.log(this.animationStep)
-        setTimeout(doNext, steps[i]);
-        i++;
-      };
-      doNext();
-    };
-
-    if (evenSteps) {
-      setInterval(() => {
-        if (this.animationStep < maxSteps) {
-          this.animationStep += 1;
-        } else {
-          return;
-        }
-      }, evenStepLength);
-    } else {
-      unevenTimeout(stepsArray);
-    }
-  }
 
   handleMoveDown = (event) => {
     if(event) {
@@ -162,9 +126,8 @@ export class AppComponent implements OnInit {
           }, 1500);
         }
 
-        if (destination.anchor === "about" && this.animateAboutPage) {
-          this.incrementAnimationStep([200, 1500, 1500, 500, 1000]);
-          this.animateAboutPage = false;
+        if (destination.anchor === "about") {
+          this.aboutPageLoaded = 1;
         }
 
         if (destination.anchor === "portfolio") {
@@ -202,6 +165,10 @@ export class AppComponent implements OnInit {
 
         if (origin.anchor === "portfolio") {
           this.skillsPageLoaded = 0;
+        }
+
+        if (origin.anchor === "about") {
+          this.aboutPageLoaded = 0;
         }
       }
     };

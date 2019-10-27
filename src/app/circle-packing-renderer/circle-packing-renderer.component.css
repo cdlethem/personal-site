@@ -1,11 +1,12 @@
 text {
-  font: 10px sans-serif;
+  font: 12px sans-serif;
   text-anchor: middle;
+  color: ivory;
 }
 
 .node--hover circle {
-  stroke: #000;
-  stroke-width: 1.2px;
+  stroke: ivory;
+  stroke-width: 1.6px;
 }
 
 svg{

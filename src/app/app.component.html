@@ -12,7 +12,7 @@
 </ul>
 
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)" #fullpageRef>
-  <div class="section fp-noscroll" id="homePage">
+  <div class="section" id="homePage">
     <div class="container">
       <div class="row justify-content-center">
         <app-landing-page [delayOver]="delayOver" (moveDown)="handleMoveDown($event)"></app-landing-page>
@@ -20,11 +20,10 @@
     </div>
   </div>
   <div class="section fp-noscroll" id="aboutPage">
-    <div class="about-bg"></div>
-    <app-about-page [animationStep]="animationStep"></app-about-page>
+    <app-about-page [aboutPageLoaded]="aboutPageLoaded"></app-about-page>
   </div>
   <div class="section" id="portfolioPage">
-    <div class="slide fp-noscroll" id="skillsPage">
+    <div class="slide" id="skillsPage">
       <app-skills-page [skillsPageLoaded]="skillsPageLoaded"></app-skills-page>
     </div>
     <div class="slide" id="projectsPage">

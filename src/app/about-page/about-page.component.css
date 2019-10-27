@@ -1,50 +1,61 @@
 .contentArea {
-  margin-top: 25vh;
+  margin-top: 10vh;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
 }
 
-.left-panel {
-  font-family: "Raleway";
-  font-size: 8vw;
-  line-height: 7vw;
-  color: ivory;
-  margin-left: 20px;
+.icon-wrapper, .label-wrapper {
+display: flex;
+justify-self: center;
 }
 
 svg-icon {
   fill: ivory;
 }
 
+svg {
+  margin: 0px 0px !important;
+}
+
+.large-text, .small-text {
+  grid-column: span 2;
+  padding-left: 20px;
+  padding-top: 40px;
+  align-self: center;
+}
+
 .label {
-  font-size: 1vw;
+  font-size: medium;
   color: ivory;
   font-family: "OpenSans";
-  text-align: left;
+  text-align: center;
   padding-top: 10px;
-  max-width: 5vw;
+  max-width: 8vw;
 }
 
 h3 {
   color: ivory;
   font-family: "OpenSans";
-  font-size: 2vw;
+  font-size: 38px;
   text-align: right;
 }
 
 hr {
-  width: 25%;
+  width: 100%;
   margin-right: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 p {
   color: ivory;
   font-family: "OpenSans";
-  font-size: 1vw;
+  font-size: 16px;
   text-align: left;
-}
-
-.just-go-away {
-  opacity: 0;
-  font-size: "8vw";
-  line-height: "7vw";
+  margin-bottom: 4px;
 }
 

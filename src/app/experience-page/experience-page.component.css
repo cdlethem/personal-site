@@ -1,6 +1,8 @@
 .timeline-wrapper {
   --line-width: 5px;
-  padding-bottom: 150px;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  height: 100%;
 }
 
 .heading {
@@ -40,11 +42,6 @@
 .heading:after,
 .heading-ie span.after {
   background-image: linear-gradient(to right, transparent, ivory);
-}
-
-.timeline-wrapper {
-  height: 100%;
-  padding-top: 5vh;
 }
 
 .circle {

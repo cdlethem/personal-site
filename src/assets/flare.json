@@ -36,6 +36,14 @@
         {
           "name": "Python / Flask",
           "size": 1
+        },
+        {
+          "name": "MongoDB",
+          "size": 2
+        },
+        {
+          "name": "PostgreSQL",
+          "size": 3
         }
       ]
     },
@@ -56,49 +64,6 @@
         },
         {
           "name": "Python",
-          "size": 2
-        }
-      ]
-    },
-    {
-      "name": "Machine Learning",
-      "children": [
-        {
-          "name": "scikit-learn",
-          "size": 4
-        },
-        {
-          "name": "Keras",
-          "size": 3
-        },
-        {
-          "name": "TensorFlow",
-          "size": 2
-        }
-      ]
-    },
-    {
-      "name": "Databases",
-      "children": [
-        {
-          "name": "MongoDB",
-          "size": 6
-        },
-        {
-          "name": "PostgreSQL",
-          "size": 3
-        }
-      ]
-    },
-    {
-      "name": "Information Management Systems",
-      "children": [
-        {
-          "name": "Podio",
-          "size": 4
-        },
-        {
-          "name": "SalesForce",
           "size": 2
         }
       ]
