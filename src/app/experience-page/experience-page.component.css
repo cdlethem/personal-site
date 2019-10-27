@@ -1,3 +1,8 @@
+.timeline-wrapper {
+  --line-width: 5px;
+  padding-bottom: 150px;
+}
+
 .heading {
   display: flex;
   color: ivory;
@@ -44,12 +49,19 @@
 
 .circle {
   font-weight: bold;
-  padding: 15px 20px;
+  padding: 20px 20px;
   border-radius: 50%;
   background-color: rgb(109,174,213);
   color: #4D4545;
   max-height: 50px;
   z-index: 2;
+}
+
+.circle-left {
+  transform: translateX(calc(var(--line-width)/2))
+}
+.circle-right {
+  transform: translateX(calc(-1*var(--line-width)/2));
 }
 
 .how-it-works.row {
@@ -64,7 +76,7 @@
 .how-it-works.row .col-2::after {
   content: "";
   position: absolute;
-  border-left: 4px solid rgb(109,174,213);
+  border-left: var(--line-width) solid rgb(109,174,213);
   z-index: 1;
 }
 .how-it-works.row .col-2.bottom::after {
@@ -74,12 +86,20 @@
 }
 .how-it-works.row .col-2.full::after {
   height: 100%;
-  left: calc(50% - 4px);
+  left: calc(50% - var(--line-width));
 }
+
+.how-it-works.row .col-2.full-left::after {
+  height: 100%;
+  left: calc(50% - var(--line-width));
+  transform: translateX(var(--line-width));
+}
+
 .how-it-works.row .col-2.top::after {
   height: 50%;
   left: 50%;
   top: 0;
+  transform: translateX(calc(-1*var(--line-width)));
 }
 
 .timeline div {
@@ -87,7 +107,7 @@
   height: 40px;
 }
 .timeline hr {
-  border-top: 4px solid rgb(109,174,213);
+  border-top: var(--line-width) solid rgb(109,174,213);
   margin: 0;
   top: 17px;
   position: relative;
@@ -97,7 +117,7 @@
   overflow: hidden;
 }
 .timeline .corner {
-  border: 4px solid rgb(109,174,213);
+  border: var(--line-width) solid rgb(109,174,213);
   width: 100%;
   position: relative;
   border-radius: 15px;
@@ -108,7 +128,7 @@
 }
 .timeline .left-bottom {
   left: -50%;
-  top: calc(50% - 4px);
+  top: calc(50% - var(--line-width));
 }
 .timeline .top-left {
   left: -50%;
@@ -116,35 +136,108 @@
 }
 .timeline .right-bottom {
   left: 50%;
-  top: calc(50% - 4px);
+  top: calc(50% - var(--line-width));
 }
 
-.text-box {
-  background: rgba(112, 112, 112, 0.2);
+.text-box-left {
+  background: rgba(34, 113, 180, 0.15);
   color: ivory;
   border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 225px auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 16px;
+  row-gap: 4px;
+}
+
+.text-box-right {
+  background: rgba(34, 113, 180, 0.15);
+  color: ivory;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto 200px;
+  grid-template-rows: auto auto;
+  column-gap: 16px;
+  row-gap: 8px;
+}
+
+.text-box-body {
+  grid-column: span 2;
+}
+
+.text-box-left .text-box-header h6 {
+  padding-bottom: 0px;
+}
+
+.text-box-left ul {
+margin-top: 4px;
+}
+
+.text-box-header, .text-box-subheader {
+  margin-left: 10%;
+  align-self: center;
+}
+
+.text-box-right h6 {
+  padding-left: 40px;
+}
+
+.text-box-subheader h6 {
+  margin-bottom: 0px;
 }
 
 .text-box h5 {
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
-.text-box p {
-
-}
-
-.img-div {
-
-}
-
-.img-container {
+.img-container-1 {
   padding: 0 0;
-  background: url(../../assets/img/uchicago.jpeg);
+  background: url(../../assets/img/university-of-chicago.png), white;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
+  background-position: center;
   border-radius: 5px;
+  min-height: 75px;
 }
 
-hr {
-  transform: translateY(-0.5px)
+.img-container-2 {
+  padding: 0 0;
+  background: url(../../assets/img/udemy.png), white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 5px;
+  min-height: 75px;
+}
+
+.img-container-3 {
+  padding: 0 0;
+  background: url(../../assets/img/dataquest.png), white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 5px;
+  min-height: 75px;
+}
+
+.img-container-4 {
+  padding: 0 0;
+  background: url(../../assets/img/golang.png), white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 5px;
+  min-height: 75px;
+}
+
+.col-8 hr {
+  transform: translateY(calc(-1*(var(--line-width) - 3px)))
+}
+
+.header-divide {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  size: 2px;
 }
